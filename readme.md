@@ -7,7 +7,6 @@
 		* Koa
 		* SocketIO
 	* MySQL (MariaDB)
-	* Redis
 * Front
 	* Angular 6
 		* mdbootstrap
