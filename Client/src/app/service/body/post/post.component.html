@@ -1,0 +1,23 @@
+<div class="mt-5 mb-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <form [formGroup]="form">
+        <div class="card notosans">
+          <div class="card-body">
+            <h4 class="card-title">질문 남기기</h4>
+            <div class="md-form">
+              <input mdbInputDirective type="text" id="form41" class="form-control" formControlName="user_nick" [mdbValidate]="false">
+              <label for="form41" class="">닉네임</label>
+            </div>
+            <div class="md-form">
+              <textarea mdbInputDirective type="text" id="form76" class="md-textarea form-control" rows="3" [ngStyle]="{'font-family': 'Noto Sans KR'}" formControlName="content" [mdbValidate]="false"></textarea>
+              <label for="form76">질문 할 내용</label>
+            </div>
+            <span class="warn">※ 비방이나 욕설, 광고 등의 질문은 관리자에 의해 삭제됩니다.</span>
+            <button type="button" class="btn btn-primary float-right" [disabled]="!form.valid" (click)="this.onSubmit()">전송</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

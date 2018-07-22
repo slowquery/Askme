@@ -1,0 +1,12 @@
+.warn {
+  position: relative;
+  top: 1.5em;
+}
+@media screen and (max-width: 768px) {
+  .warn {
+    top: auto !important;
+  }
+  .row {
+    margin: 0;
+  }
+}

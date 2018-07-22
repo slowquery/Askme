@@ -1,0 +1,30 @@
+<div class="mt-4" *ngIf="!this.chat.qnas.length">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card notosans">
+        <div class="card-body">
+          <h4 class="card-title">등록된 질문이 없습니다.</h4>
+          <p class="card-text">새로운 질문을 등록해주세요!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mt-4" *ngFor="let qna of this.chat.qnas">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card notosans">
+        <div class="card-body">
+          <span class="badge badge-info float-right">{{ qna["board_created"] | timeAgo }}</span>
+          <h4 class="card-title">{{ qna["content"] }}</h4>
+          <p class="card-text">{{ qna["user_nick"] }}</p>
+          <p *ngIf="qna['comment']">{{ qna["comment"] }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="this.chat.infiniteFlag"></div>
+<div infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollUpDistance]="2" [infiniteScrollThrottle]="50" (scrolled)="onScroll()"></div>
