@@ -1,0 +1,13 @@
+{
+	"name": "ask",
+	"script": "server.js",
+	"log_date_format": "YYYY-MM-DD HH:mm:ss.SSS Z",
+	"ignoreWatch": ["node_modules"],
+	"watch": true,
+	"args": [
+		"--color"
+	],
+	"env": {
+		"NODE_ENV": "production"
+	}
+}
